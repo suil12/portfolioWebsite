@@ -1,0 +1,66 @@
+<!-- views/contact.ejs -->
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<main>
+    <section class="page-header">
+        <h1>Contattami</h1>
+        <p>Hai un progetto in mente? Parliamone!</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>souhail_12@icloud.com</p>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <h3>Telefono</h3>
+                <p>+39 351 882 5590</p>
+            </div>
+            
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Sede</h3>
+                <p>Novara, Italia</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <% if (typeof success !== 'undefined') { %>
+                <div class="success-message">
+                    <p><i class="fas fa-check-circle"></i> <%= success %></p>
+                </div>
+            <% } %>
+            
+            <form action="/contact" method="POST">
+                <div class="form-group">
+                    <label for="name">Nome completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn submit-btn">Invia messaggio</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

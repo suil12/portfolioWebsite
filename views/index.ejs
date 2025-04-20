@@ -1,0 +1,144 @@
+<!-- views/index.ejs -->
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Ciao, sono <span class="highlight">Souhail Nmili</span></h1>
+            <h2>Sviluppatore Full Stack</h2>
+            <p>Creo applicazioni web eleganti e funzionali</p>
+            <div class="cta-buttons">
+                <a href="/projects" class="btn primary-btn">Vedi i miei progetti</a>
+                <a href="/contact" class="btn secondary-btn">Contattami</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-image">
+                <img src="/images/io.jpeg" alt="La mia foto">
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-projects">
+        <h2 class="section-title">Progetti in evidenza</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/resadviser.png" alt="ResAdviser App">
+                </div>
+                <div class="project-info">
+                    <h3>App Mobile - ResAdvisor, your local' restaurant advisor</h3>
+                    <p>Un applicazione android, sviluppata in android studio in linguaggio java e con retrive dei dati da firebase.</p>
+                    <div class="project-tags">
+                        <span>Java</span>
+                        <span>Firebase</span>
+                        <span>Git</span>
+                        <span>AndroidStudio</span>
+                    </div>
+                    <a href="/projects/1" class="btn small-btn">Vedi dettagli</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/images/mechfinder.png" alt="MechFinder website">
+                </div>
+                <div class="project-info">
+                    <h3>MechFinder - piattaforma web per professionisti e meccanici</h3>
+                    <p>Un sito web che permette a meccanici e privati di accordarsi in riparazioni e non solo, di veicoli, in piena libertà.</p>
+                    <div class="project-tags">
+                        <span>Node.js</span>
+                        <span>Sql</span>
+                    </div>
+                    <a href="/projects/2" class="btn small-btn">Vedi dettagli</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/images/mobishare.png" alt="Mobishare Software">
+                </div>
+                <div class="project-info">
+                    <h3>Mobishare - Share Mobility Software</h3>
+                    <p>logo for a rent sharing bikes and scooters named Mobishare</p>
+                    <div class="project-tags">
+                        <span>C#</span>
+                        <span>Sql</span>
+                        <span>GitLab</span>
+                        <span>Blazor</span>
+                    </div>
+                    <a href="/projects/3" class="btn small-btn">Vedi dettagli</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="/projects" class="btn">Vedi tutti i progetti</a>
+        </div>
+    </section>
+
+    <section class="skills-section">
+        <h2 class="section-title">Le mie competenze</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <span class="skill-name">C/C#</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Html/CSS</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">React</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">MongoDB</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 80%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Git</span>
+                <div class="skill-bar">
+                    <div class="skill-level" style="width: 90%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="/about" class="btn">Scopri di più su di me</a>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>

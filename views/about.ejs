@@ -1,0 +1,78 @@
+<!-- views/about.ejs -->
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<main>
+    <section class="page-header">
+        <h1>Chi Sono</h1>
+        <p>Scopri di più su di me e sulle mie competenze</p>
+    </section>
+
+    <section class="about-section">
+        <div class="hero-image">
+            <div class="profile-image">
+                <img src="/images/io.jpeg" alt="La mia foto">
+            </div>
+        </div>
+        
+        <div class="about-content">
+            <h2><%= about.name %></h2>
+            <h3><%= about.title %></h3>
+            <p class="bio"><%= about.bio %></p>
+            
+            <div class="download-resume">
+                <a href="/docs/cvSouhailNmili.pdf" target="_blank" class="btn">
+                    <i class="fas fa-download"></i> Scarica CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills-section full-width">
+        <h2 class="section-title">Le mie competenze</h2>
+        <div class="skills-container">
+            <% about.skills.forEach(skill => { %>
+                <div class="skill-item">
+                    <span class="skill-name"><%= skill.name %></span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: <%= skill.level %>%"></div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <section class="experience-section">
+        <h2 class="section-title">Esperienza professionale</h2>
+        <div class="timeline">
+            <% about.experience.forEach(exp => { %>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><%= exp.position %> - <%= exp.company %></h3>
+                        <span class="period"><%= exp.period %></span>
+                        <p><%= exp.description %></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+
+    <section class="education-section">
+        <h2 class="section-title">Formazione</h2>
+        <div class="timeline">
+            <% about.education.forEach(edu => { %>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><%= edu.degree %></h3>
+                        <span class="period"><%= edu.period %></span>
+                        <p><%= edu.institution %></p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/footer') %>
