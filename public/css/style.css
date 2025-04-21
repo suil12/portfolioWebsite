@@ -804,3 +804,145 @@ footer {
   height: 100%;
   object-fit: cover;
 }
+/* Aggiungi questi stili al tuo style.css esistente */
+
+/* About Preview Section */
+.about-preview {
+  background-color: var(--card-background);
+  padding: 4rem 2rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 12px rgba(25, 25, 112, 0.1);
+  max-width: 1200px;
+  margin: 4rem auto;
+  border: 1px solid var(--border-color);
+}
+
+.about-preview-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-preview-content p {
+  font-size: 1.125rem;
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 4rem 2rem;
+  margin: 4rem auto 0;
+  text-align: center;
+}
+
+.contact-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-cta h2 {
+  color: var(--white);
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.contact-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.contact-cta .primary-btn {
+  background-color: var(--white);
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 0.875rem 2rem;
+}
+
+.contact-cta .primary-btn:hover {
+  background-color: #f8f9fa;
+}
+
+/* Animazioni per le sezioni */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero, .featured-projects, .about-preview, .skills-section, .contact-cta {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+.hero {
+  animation-delay: 0.2s;
+}
+
+.featured-projects {
+  animation-delay: 0.4s;
+}
+
+.about-preview {
+  animation-delay: 0.6s;
+}
+
+.skills-section {
+  animation-delay: 0.8s;
+}
+
+.contact-cta {
+  animation-delay: 1s;
+}
+
+/* Miglioramenti per i progetti */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-info a.btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.project-image img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Responsive design aggiuntivo */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-cta h2 {
+    font-size: 1.75rem;
+  }
+}
