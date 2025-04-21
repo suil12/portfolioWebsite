@@ -8,7 +8,7 @@ const projects = [
         id: 1,
         title: 'App Mobile - ResAdvisor, your local\' restaurant advisor',
         description: 'Un applicazione android, sviluppata in android studio in linguaggio java e con retrive dei dati da firebase.',
-        image: 'images/resadviser.png',
+        image: '/images/resadviser.png',
         technologies: ['Java', 'Firebase', 'Git', 'AndroidStudio'],
         github: 'https://github.com/suil12/ResAdviser',
         demo: 'https://project1-demo.com'
