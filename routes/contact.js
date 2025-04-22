@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.render('contact', { 
-        title: 'Contattami'
+        title: 'Contact me'
     });
 });
 
@@ -16,12 +16,12 @@ router.post('/', (req, res) => {
     // Qui andrà inserita la logica per l'invio dell'email
     // Per ora, simuliamo un invio riuscito
     
-    console.log('Messaggio ricevuto:');
+    console.log('Messagge recieved:');
     console.log({ name, email, message });
     
     res.render('contact', {
-        title: 'Contattami',
-        success: 'Grazie per il tuo messaggio! Ti risponderò presto.'
+        title: 'Contact me',
+        success: 'Thanks for your messagge. I\'ll get in touch with you soon!'
     });
 });
 

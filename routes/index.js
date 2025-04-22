@@ -4,8 +4,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     res.render('index', { 
-        title: 'Il Mio Portfolio',
-        description: 'Benvenuto nel mio portfolio professionale'
+        title: 'My Portfolio',
+        description: 'Welcome to my professional personal portfolio.'
     });
 });
 

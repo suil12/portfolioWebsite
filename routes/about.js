@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
     // Dati di esempio per la pagina about
     const aboutData = {
         name: 'Souhail Nmili',
-        title: 'Laureando informatico e Sviluppatore Full Stack',
-        bio: 'Sono un laureando in informatica, impegnato in uno stage da svipuppatore software per azienda informatica di software per studi clinici.\nCon alle spalle anche un semestre all\'estero presso la Universidad De Sevilla, dove mi sono migliorato a livello personale e istituzionale, ampliando anche le mie doti linguistiche.\nHo creato e sviluppato vari progetti, per esami universitari e non, di seguito potete visionarne i maggiori.',
+        title: 'Computer Science Graduate and Full Stack Developer',
+        bio: 'I am a computer science graduate, engaged in an internship as a software developer for an IT company that produces software for clinical studies.I also have a semester abroad at the Universidad De Sevilla, where I improved myself on a personal and institutional level, also expanding my linguistic skills.\nI have created and developed various projects, for university exams and otherwise, below you can see the main ones.',
         skills: [
             { name: 'C / C#', level: 85 },
             { name: 'JavaScript', level: 90 },
@@ -22,33 +22,33 @@ router.get('/', (req, res) => {
         experience: [
             {
                 company: 'Nubilaria Srl',
-                position: 'Internship - Sviluppatore Software',
+                position: 'Internship - Software Developer',
                 period: '01/2025 - 05/2025',
-                description: 'Sviluppo di software per automazione del testing software in Node.js e framework cucmber'
+                description: 'Software development for software testing automation in Node.js and cucmber framework'
             },
             {
                 company: 'NovaCoop GDO',
-                position: 'Cassiere e scaffalista',
+                position: 'Cashier and shelfman',
                 period: '07/2022 - 09/2022',
-                description: 'Gestione cassa e articoli del punto vendita'
+               description: 'Shelves stocking and checkout management'
             },
             {
                 company: 'Amazon Italia',
-                position: 'Operatore di magazzino',
+                position: 'Warehouse operator',
                 period: '11/2021 - 01/2022',
-                description: 'Stockaggio, impacchettamento e distribuzione pacchi'
+                description: 'Storage, packaging and distribution of parcels'
             },
             {
                 company: 'O.m.s. Group',
-                position: 'Stage - Operaio elettrico',
+                position: 'Stage - Electrician operator',
                 period: '06/2019 - 07/2019',
-                description: 'Lettura schemi ed assemblaggio e collaudo macchinari elettrici'
+                description: 'Reading diagrams and assembling and testing electrical machinery'
             }
         ],
         education: [
             {
                 institution: 'Università del Piemonte Orientale',
-                degree: 'Laurea in Informatica',
+                degree: 'Computer Science Degree',
                 period: '2021 - 2025'
             },
             {
@@ -65,7 +65,7 @@ router.get('/', (req, res) => {
     };
 
     res.render('about', { 
-        title: 'Chi Sono',
+        title: 'Who I am',
         about: aboutData
     });
 });
