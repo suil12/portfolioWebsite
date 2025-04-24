@@ -1,0 +1,303 @@
+/* animations.css - File dedicato alle animazioni del portfolio */
+
+/* Keyframes per le animazioni */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInFromLeft {
+    from { 
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to { 
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    from { 
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to { 
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    from { 
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to { 
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from { 
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to { 
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    60% { transform: translateY(-10px); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  /* Classi di animazione che possono essere applicate a qualsiasi elemento */
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .animated.fast {
+    animation-duration: 0.5s;
+  }
+  
+  .animated.slow {
+    animation-duration: 1.5s;
+  }
+  
+  .animated.delay-1 {
+    animation-delay: 0.2s;
+  }
+  
+  .animated.delay-2 {
+    animation-delay: 0.4s;
+  }
+  
+  .animated.delay-3 {
+    animation-delay: 0.6s;
+  }
+  
+  .animated.delay-4 {
+    animation-delay: 0.8s;
+  }
+  
+  .animated.infinite {
+    animation-iteration-count: infinite;
+  }
+  
+  /* Classi specifiche per ciascuna animazione */
+  .fade-in {
+    animation-name: fadeIn;
+  }
+  
+  .slide-in-left {
+    animation-name: slideInFromLeft;
+  }
+  
+  .slide-in-right {
+    animation-name: slideInFromRight;
+  }
+  
+  .slide-in-bottom {
+    animation-name: slideInFromBottom;
+  }
+  
+  .scale-in {
+    animation-name: scaleIn;
+  }
+  
+  .spin {
+    animation-name: spin;
+  }
+  
+  .bounce {
+    animation-name: bounce;
+  }
+  
+  .pulse {
+    animation-name: pulse;
+  }
+  
+  /* Animazioni specifiche per elementi del portfolio */
+  
+  /* Animazione per la nav bar */
+  .navbar {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Animazioni per l'hero section */
+  .hero-content h1 {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-out 0.2s forwards;
+  }
+  
+  .hero-content h2 {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-out 0.4s forwards;
+  }
+  
+  .hero-content p {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease-out 0.6s forwards;
+  }
+  
+  .cta-buttons {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 0.8s forwards;
+  }
+  
+  .hero-image {
+    opacity: 0;
+    animation: scaleIn 1s ease-out 0.5s forwards;
+  }
+  
+  /* Animazione per i progetti */
+  .project-card {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease;
+  }
+  
+  .project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(25, 25, 112, 0.15);
+  }
+  
+  /* Animazione per le skill bars */
+  .skill-level {
+    width: 0 !important; /* Override della larghezza impostata inline */
+    transition: width 1.5s ease-in-out;
+  }
+  
+  .skill-level.animated {
+    width: var(--skill-percent) !important;
+  }
+  
+  /* Animazione per le sezioni a scorrimento */
+  .section-title, .page-header h1, .page-header p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .section-title.visible, .page-header.visible h1, .page-header.visible p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animazione per le timeline */
+  .timeline-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  /* Animazione per i social links */
+  .social-links a {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Effetto spotlight per i bottoni principali */
+  .primary-btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .primary-btn::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: transform 0.5s ease-out;
+    opacity: 0;
+  }
+  
+  .primary-btn:hover::after {
+    transform: rotate(30deg) translate(10%, 10%);
+    opacity: 1;
+  }
+  
+  /* Effetti di hover per i bottoni */
+  .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Animazione per il profilo immagine */
+  .profile-image {
+    transition: transform 0.5s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animazione per il menu mobile */
+  .mobile-menu span {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* Cursore personalizzato (opzionale) */
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    opacity: 0;
+  }
+  
+  .cursor.visible {
+    opacity: 0.7;
+  }
+  
+  .cursor.active {
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: var(--primary-color);
+  }
