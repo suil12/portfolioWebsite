@@ -184,15 +184,45 @@
   }
   
   /* Animazione per le skill bars */
-  .skill-level {
-    width: 0 !important; /* Override della larghezza impostata inline */
-    transition: width 1.5s ease-in-out;
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
   
-  .skill-level.animated {
-    width: var(--skill-percent) !important;
+  .skill-tag {
+    animation: popIn 0.5s ease-out forwards;
+    opacity: 0;
   }
   
+  /* Aggiungi ritardi diversi per ogni skill tag per creare un effetto a cascata */
+  .skills-grid .skill-tag:nth-child(1) { animation-delay: 0.1s; }
+  .skills-grid .skill-tag:nth-child(2) { animation-delay: 0.2s; }
+  .skills-grid .skill-tag:nth-child(3) { animation-delay: 0.3s; }
+  .skills-grid .skill-tag:nth-child(4) { animation-delay: 0.4s; }
+  .skills-grid .skill-tag:nth-child(5) { animation-delay: 0.5s; }
+  .skills-grid .skill-tag:nth-child(6) { animation-delay: 0.6s; }
+  .skills-grid .skill-tag:nth-child(7) { animation-delay: 0.7s; }
+  .skills-grid .skill-tag:nth-child(8) { animation-delay: 0.8s; }
+  .skills-grid .skill-tag:nth-child(9) { animation-delay: 0.9s; }
+  .skills-grid .skill-tag:nth-child(n+10) { animation-delay: 1s; }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .skills-grid {
+      gap: 0.75rem;
+    }
+    
+    .skill-tag {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
   /* Animazione per le sezioni a scorrimento */
   .section-title, .page-header h1, .page-header p {
     opacity: 0;

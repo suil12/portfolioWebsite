@@ -29,16 +29,13 @@
     </section>
 
     <section class="skills-section full-width">
-        <h2 class="section-title">My competences</h2>
+        <h2 class="section-title">Le mie competenze</h2>
         <div class="skills-container">
-            <% about.skills.forEach(skill => { %>
-                <div class="skill-item">
-                    <span class="skill-name"><%= skill.name %></span>
-                    <div class="skill-bar">
-                        <div class="skill-level" style="width: <%= skill.level %>%"></div>
-                    </div>
-                </div>
-            <% }) %>
+            <div class="skills-grid">
+                <% about.skills.forEach(skill => { %>
+                    <div class="skill-tag"><%= skill.name %></div>
+                <% }) %>
+            </div>
         </div>
     </section>
 
