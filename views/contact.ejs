@@ -29,41 +29,35 @@
             </div>
             
             <div class="social-links">
-                <a href="https://github.com/suil12" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/souhail-nm" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
         
         <div class="contact-form">
             <% if (typeof success !== 'undefined') { %>
                 <div class="success-message">
-                    <i class="fas fa-check-circle"></i> <%= success %>
-                </div>
-            <% } %>
-            
-            <% if (typeof error !== 'undefined') { %>
-                <div class="error-message">
-                    <i class="fas fa-exclamation-circle"></i> <%= error %>
+                    <p><i class="fas fa-check-circle"></i> <%= success %></p>
                 </div>
             <% } %>
             
             <form action="/contact" method="POST">
                 <div class="form-group">
                     <label for="name">Complete Name</label>
-                    <input type="text" id="name" name="name" required value="<%= typeof formData !== 'undefined' ? formData.name || '' : '' %>">
+                    <input type="text" id="name" name="name" required>
                 </div>
                 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required value="<%= typeof formData !== 'undefined' ? formData.email || '' : '' %>">
+                    <input type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required><%= typeof formData !== 'undefined' ? formData.message || '' : '' %></textarea>
+                    <label for="message">Messagge</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn submit-btn">Send Message</button>
+                <button type="submit" class="btn submit-btn">Send Messagge</button>
             </form>
         </div>
     </section>
